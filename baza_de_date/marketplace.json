@@ -11,6 +11,46 @@
       "data_inregistrare": "2022-03-28T20:27:53.253966+03:00"
     }
   },
-  "produse": {},
-  "comenzi": {}
+  "produse": {
+    "c703f4772a4ce4cc781694f399f8d907": {
+      "nume_produs": "mere",
+      "pret": 6.9,
+      "data_inregistrare": "2022-03-30T19:35:06.610063+03:00",
+      "cantitate": "8"
+    },
+    "dd158481bda101856690988c7d877687": {
+      "nume_produs": "pere",
+      "pret": 9.0,
+      "data_inregistrare": "2022-03-30T19:35:22.017077+03:00",
+      "cantitate": "12"
+    },
+    "f139ba1766c5ebde82f41c248e255325": {
+      "nume_produs": "ananas",
+      "pret": 15.0,
+      "data_inregistrare": "2022-03-30T19:37:04.803894+03:00",
+      "cantitate": "8.5"
+    }
+  },
+  "comenzi": {
+    "583309f03e6b2a112d91985b800b3f8d": {
+      "produse_comanda": "pere",
+      "cantitate": "6",
+      "data_inregistrare": "2022-03-30T21:28:16.518560+03:00"
+    },
+    "df1df934cc605792eb77b6b817eb7450": {
+      "produse_comanda": "mere_verzi",
+      "cantitate": "45",
+      "data_inregistrare": "2022-03-30T21:29:32.243981+03:00"
+    },
+    "5313dfd591b7bb8ccb55b66bf34be646": {
+      "produse_comanda": "mure",
+      "cantitate": "125",
+      "data_inregistrare": "2022-03-30T21:34:33.532251+03:00"
+    },
+    "db45f9dad05324aaf28f5fbcd8cbafd2": {
+      "produse_comanda": "portocale",
+      "cantitate": "12",
+      "data_inregistrare": "2022-03-30T21:34:49.244714+03:00"
+    }
+  }
 }

@@ -8,10 +8,15 @@ Produsele ar trebui sa aiba structura:
 })
 
 """
+from baza_de_date.functii import citeste_datele_din_baza_de_date, scrie_datele_in_baza_de_date
+from datetime import datetime
+from pprint import pprint
+
+from pytz import country_timezones, timezone
 import hashlib
 
 
-def genereaza_id_produs(nume_produs, pret):
+def genereaza_id_produs(nume_produs: object, pret: object) -> object:
     hash_object = hashlib.md5(bytes(nume_produs + pret, encoding='UTF-8'))
     hex_dig = hash_object.hexdigest()
     return hex_dig
@@ -29,7 +34,25 @@ def adauga_un_produs():
     Generam structura dictionarului
     Scriem in baza de date
     '''
-    pass
+    nume_produs = ""
+    pret = 0
+    while len(nume_produs) < 1 or len(nume_produs) > 50:
+        nume_produs = input("Introduceti numele produsului de adaugat:\n")
+        if len(nume_produs) < 1 or len(nume_produs) > 50:
+            print("Nume invalid, trebuie sa aiba intre 1 si 50 de caractere")
+    pret_in_string = input("Introduceti pretul produsului de adaugat: \n")
+    cantitate = float(input("Introduceti cantitate produsului de adaugat: \n"))
+    id_produs = genereaza_id_produs(nume_produs, pret_in_string)
+    pret = float(pret_in_string)
+    data_inregistrare = datetime.now(tz=timezone(country_timezones.get("RO")[0]))
+    datele_noastre = citeste_datele_din_baza_de_date()
+    datele_noastre["produse"][id_produs] = {
+        "nume_produs": nume_produs,
+        "pret": pret,
+        "data_inregistrare": data_inregistrare.isoformat(),
+        "cantitate": cantitate
+    }
+    scrie_datele_in_baza_de_date(datele_noastre)
 
 
 def listeaza_toate_produsele():
@@ -37,8 +60,16 @@ def listeaza_toate_produsele():
     Functia trebuie sa afiseze toate produsele prezente in baza de date.
     Afisarea ar trebui sa contina toate informatiile produselor
     """
-    pass
+    datele_noastre = citeste_datele_din_baza_de_date()
+    produse = datele_noastre["produse"]
+    if produse:
+        pprint(produse)
+    else:
+        print("Nu exista produse")
 
 
 def sterge_produs():
-    pass
+    produs_pt_sters = input("intrrodu id pt sters\n")
+    datele_noastre = citeste_datele_din_baza_de_date()
+    datele_noastre["produse"].pop(produs_pt_sters)
+    scrie_datele_in_baza_de_date(datele_noastre)
