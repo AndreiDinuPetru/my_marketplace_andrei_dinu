@@ -32,25 +32,26 @@
     }
   },
   "comenzi": {
-    "583309f03e6b2a112d91985b800b3f8d": {
-      "produse_comanda": "pere",
-      "cantitate": "6",
-      "data_inregistrare": "2022-03-30T21:28:16.518560+03:00"
+    "0b73ce3abfbd453c2bc44a7e3c8bb58c": {
+      "id_comanda": "0b73ce3abfbd453c2bc44a7e3c8bb58c",
+      "detali_comanda": {
+        "papuci": "6"
+      },
+      "data_inregistrare": "2022-03-31T18:38:56.040226+03:00"
     },
-    "df1df934cc605792eb77b6b817eb7450": {
-      "produse_comanda": "mere_verzi",
-      "cantitate": "45",
-      "data_inregistrare": "2022-03-30T21:29:32.243981+03:00"
+    "a42251da5f70671dd99e42fdcd80f48e": {
+      "id_comanda": "a42251da5f70671dd99e42fdcd80f48e",
+      "detali_comanda": {
+        "varza": "14"
+      },
+      "data_inregistrare": "2022-03-31T18:57:15.759494+03:00"
     },
-    "5313dfd591b7bb8ccb55b66bf34be646": {
-      "produse_comanda": "mure",
-      "cantitate": "125",
-      "data_inregistrare": "2022-03-30T21:34:33.532251+03:00"
-    },
-    "db45f9dad05324aaf28f5fbcd8cbafd2": {
-      "produse_comanda": "portocale",
-      "cantitate": "12",
-      "data_inregistrare": "2022-03-30T21:34:49.244714+03:00"
+    "f57148293257b6622c9c6f7ea19fc3e5": {
+      "id_comanda": "f57148293257b6622c9c6f7ea19fc3e5",
+      "detali_comanda": {
+        "sapun": "7"
+      },
+      "data_inregistrare": "2022-03-31T18:57:37.403359+03:00"
     }
   }
 }

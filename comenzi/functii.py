@@ -41,13 +41,13 @@ def adauga_o_comanda():
         nume_produs = input("Introduceti produsele din comanda.\n") #introducerea produsului
         cantitatea = input("Introduceti cantitatea din comanda.\n") #introducerea cantitatii
         actiune = input("Pentru a termina, introduceti:'stop' pentru a adauga o noua comanda apasa orice tasta si enter\n")
-        detalii_comanda = str(nume_produs) + str(cantitatea) # detaliile comanda pentru a putea genera id_comanda
+        detalii_comanda = {nume_produs : cantitatea} # detaliile comanda pentru a putea genera id_comanda
         id_comanda = genereaza_id_comanda(detalii_comanda)
         data_inregistrare = datetime.now(tz=timezone(country_timezones.get("RO")[0]))
         datele_noastre = citeste_datele_din_baza_de_date() # citirea din fisier
         datele_noastre["comenzi"][id_comanda] = { #structura dictionarului
-            "produse_comanda": nume_produs,
-            "cantitate": cantitatea,
+            "id_comanda": id_comanda,
+            "detali_comanda": detalii_comanda,
             "data_inregistrare": data_inregistrare.isoformat()
         }
         scrie_datele_in_baza_de_date(datele_noastre)
@@ -79,8 +79,8 @@ def modifica_comanda():
                         print("Nume invalid, trebuie sa aiba intre 1 si 50 de caractere")
                 cantitatea = float(input("Introduceti cantitate produsului de adaugat: \n"))
                 datele_noastre["comenzi"][identificatorul] = {
-                "produse_comanda": nume_produs,
-                "cantitate": cantitatea,
+                "id_comanda": identificatorul,
+                "detali_comanda": {nume_produs : cantitatea},
                 "data_inregistrare": data_inregistrare.isoformat()
                  }
                 print("Alegeti actiunea ('a' - adaugare produs; 'm ' - modificare cantitate; 's'-sterge produs, 'e'-exit \n")
@@ -92,9 +92,9 @@ def modifica_comanda():
                         print("Nume invalid, trebuie sa aiba intre 1 si 50 de caractere")
                 cantitatea = float(input("Introduceti cantitate produsului de adaugat: \n"))
                 datele_noastre["comenzi"][identificatorul] = {
-                "produse_comanda": nume_produs,
-                "cantitate": cantitatea,
-                "data_inregistrare": data_inregistrare.isoformat()
+                    "id_comanda": identificatorul,
+                    "detali_comanda": {nume_produs: cantitatea},
+                    "data_inregistrare": data_inregistrare.isoformat()
                 }
                 print("Alegeti actiunea ('a' - adaugare produs; 'm ' - modificare cantitate; 's'-sterge produs, 'e'-exit \n")
             elif actiune.lower() == "s":
