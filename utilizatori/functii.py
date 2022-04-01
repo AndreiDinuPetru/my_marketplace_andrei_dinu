@@ -34,10 +34,10 @@ def adauga_un_utilizator():
     Generam structura dictionarului
     Scriem in baza de date
     """
-    nume, email = "",""
-    while len(nume) <1 or len(nume)>50:
+    nume, email = "" , ""
+    while len(nume) < 1 or len(nume)>50:
         nume = input("Introduceti numele utilizatori de adaugat:\n")
-        if len(nume) <1 or len(nume)>50:
+        if len(nume) < 1 or len(nume)>50:
             print("Nume invalid, trebuie sa aiba intre 1 si 50 de caractere")
     while len(email) < 1:
         email = input("Introduceti mailul utilizator de adaugat: \n")
