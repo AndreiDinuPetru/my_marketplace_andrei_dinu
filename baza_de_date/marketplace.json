@@ -29,15 +29,21 @@
       "pret": 15.0,
       "data_inregistrare": "2022-03-30T19:37:04.803894+03:00",
       "cantitate": "8.5"
+    },
+    "ea70ddeb97047c6264fd116744eef218": {
+      "nume_produs": "dovleci",
+      "pret": 15.3,
+      "data_inregistrare": "2022-04-02T13:34:04.165224+03:00",
+      "cantitate": 85.0
     }
   },
   "comenzi": {
     "0b73ce3abfbd453c2bc44a7e3c8bb58c": {
       "id_comanda": "0b73ce3abfbd453c2bc44a7e3c8bb58c",
       "detali_comanda": {
-        "papuci": "6"
+        "papuci": 15.0
       },
-      "data_inregistrare": "2022-03-31T18:38:56.040226+03:00"
+      "data_inregistrare": "2022-04-02T13:29:48.107976+03:00"
     },
     "a42251da5f70671dd99e42fdcd80f48e": {
       "id_comanda": "a42251da5f70671dd99e42fdcd80f48e",
@@ -52,6 +58,13 @@
         "sapun": "7"
       },
       "data_inregistrare": "2022-03-31T18:57:37.403359+03:00"
+    },
+    "609a82274ae819cec0fa6451d35b1db8": {
+      "id_comanda": "609a82274ae819cec0fa6451d35b1db8",
+      "detali_comanda": {
+        "pepene": 45.0
+      },
+      "data_inregistrare": "2022-04-02T13:31:54.007505+03:00"
     }
   }
 }

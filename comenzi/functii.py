@@ -39,7 +39,7 @@ def adauga_o_comanda():
     actiune = None
     while actiune != "stop":
         nume_produs = input("Introduceti produsele din comanda.\n") #introducerea produsului
-        cantitatea = input("Introduceti cantitatea din comanda.\n") #introducerea cantitatii
+        cantitatea = float(input("Introduceti cantitatea din comanda.\n")) #introducerea cantitatii
         actiune = input("Pentru a termina, introduceti:'stop' pentru a adauga o noua comanda apasa orice tasta si enter\n")
         detalii_comanda = {nume_produs : cantitatea} # detaliile comanda pentru a putea genera id_comanda
         id_comanda = genereaza_id_comanda(detalii_comanda)
@@ -91,11 +91,14 @@ def modifica_comanda():
                     if len(nume_produs) < 1 or len(nume_produs) > 50:
                         print("Nume invalid, trebuie sa aiba intre 1 si 50 de caractere")
                 cantitatea = float(input("Introduceti cantitate produsului de adaugat: \n"))
-                datele_noastre["comenzi"][identificatorul] = {
-                    "id_comanda": identificatorul,
-                    "detali_comanda": {nume_produs: cantitatea},
-                    "data_inregistrare": data_inregistrare.isoformat()
-                }
+                if nume_produs in datele_noastre["comenzi"][identificatorul]["detali_comanda"]:
+                    datele_noastre["comenzi"][identificatorul] = {
+                        "id_comanda": identificatorul,
+                        "detali_comanda": {nume_produs: cantitatea},
+                        "data_inregistrare": data_inregistrare.isoformat()
+                    }
+                else:
+                    print(f"produsul {nume_produs} nu este in comanda")
                 print("Alegeti actiunea ('a' - adaugare produs; 'm ' - modificare cantitate; 's'-sterge produs, 'e'-exit \n")
             elif actiune.lower() == "s":
                 datele_noastre["comenzi"].pop(identificatorul)
