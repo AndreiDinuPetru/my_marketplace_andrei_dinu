@@ -16,19 +16,19 @@
       "nume_produs": "mere",
       "pret": 6.9,
       "data_inregistrare": "2022-03-30T19:35:06.610063+03:00",
-      "cantitate": "8"
+      "cantitate": 8
     },
     "dd158481bda101856690988c7d877687": {
       "nume_produs": "pere",
       "pret": 9.0,
       "data_inregistrare": "2022-03-30T19:35:22.017077+03:00",
-      "cantitate": "12"
+      "cantitate": 12
     },
     "f139ba1766c5ebde82f41c248e255325": {
       "nume_produs": "ananas",
       "pret": 15.0,
       "data_inregistrare": "2022-03-30T19:37:04.803894+03:00",
-      "cantitate": "8.5"
+      "cantitate": 8.5
     },
     "ea70ddeb97047c6264fd116744eef218": {
       "nume_produs": "dovleci",
@@ -48,14 +48,14 @@
     "a42251da5f70671dd99e42fdcd80f48e": {
       "id_comanda": "a42251da5f70671dd99e42fdcd80f48e",
       "detali_comanda": {
-        "varza": "14"
+        "varza": 14
       },
       "data_inregistrare": "2022-03-31T18:57:15.759494+03:00"
     },
     "f57148293257b6622c9c6f7ea19fc3e5": {
       "id_comanda": "f57148293257b6622c9c6f7ea19fc3e5",
       "detali_comanda": {
-        "sapun": "7"
+        "sapun": 7
       },
       "data_inregistrare": "2022-03-31T18:57:37.403359+03:00"
     },
