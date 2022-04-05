@@ -13,13 +13,8 @@ from datetime import datetime
 from pprint import pprint
 
 from pytz import country_timezones, timezone
-import hashlib
+from common.util import genereaza_id , sterge , listeaza
 
-
-def genereaza_id_produs(nume_produs: object, pret: object) -> object:
-    hash_object = hashlib.md5(bytes(nume_produs + pret, encoding='UTF-8'))
-    hex_dig = hash_object.hexdigest()
-    return hex_dig
 
 
 def adauga_un_produs():
@@ -42,7 +37,7 @@ def adauga_un_produs():
             print("Nume invalid, trebuie sa aiba intre 1 si 50 de caractere")
     pret_in_string = input("Introduceti pretul produsului de adaugat: \n")
     cantitate = float(input("Introduceti cantitate produsului de adaugat: \n"))
-    id_produs = genereaza_id_produs(nume_produs, pret_in_string)
+    id_produs = genereaza_id(nume_produs)
     pret = float(pret_in_string)
     data_inregistrare = datetime.now(tz=timezone(country_timezones.get("RO")[0]))
     datele_noastre = citeste_datele_din_baza_de_date()
@@ -60,16 +55,8 @@ def listeaza_toate_produsele():
     Functia trebuie sa afiseze toate produsele prezente in baza de date.
     Afisarea ar trebui sa contina toate informatiile produselor
     """
-    datele_noastre = citeste_datele_din_baza_de_date()
-    produse = datele_noastre["produse"]
-    if produse:
-        pprint(produse)
-    else:
-        print("Nu exista produse")
-
+    listeaza("produse")
 
 def sterge_produs():
     produs_pt_sters = input("intrrodu id pt sters\n")
-    datele_noastre = citeste_datele_din_baza_de_date()
-    datele_noastre["produse"].pop(produs_pt_sters)
-    scrie_datele_in_baza_de_date(datele_noastre)
+    sterge(produs_pt_sters, "produse")

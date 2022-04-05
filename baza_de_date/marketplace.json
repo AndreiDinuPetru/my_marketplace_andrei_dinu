@@ -9,6 +9,11 @@
       "nume": "andrei",
       "email": "andrei@email.ro",
       "data_inregistrare": "2022-03-28T20:27:53.253966+03:00"
+    },
+    "e4f62c01e45bf7e217e18f1fe3d900aa": {
+      "nume": "maria",
+      "email": "maria@maria",
+      "data_inregistrare": "2022-04-05T20:32:11.433951+03:00"
     }
   },
   "produse": {
@@ -38,13 +43,6 @@
     }
   },
   "comenzi": {
-    "0b73ce3abfbd453c2bc44a7e3c8bb58c": {
-      "id_comanda": "0b73ce3abfbd453c2bc44a7e3c8bb58c",
-      "detali_comanda": {
-        "papuci": 15.0
-      },
-      "data_inregistrare": "2022-04-02T13:29:48.107976+03:00"
-    },
     "a42251da5f70671dd99e42fdcd80f48e": {
       "id_comanda": "a42251da5f70671dd99e42fdcd80f48e",
       "detali_comanda": {
@@ -65,6 +63,27 @@
         "pepene": 45.0
       },
       "data_inregistrare": "2022-04-02T13:31:54.007505+03:00"
+    },
+    "9ea46fe018b56990da8a12126b85e0f1": {
+      "id_comanda": "9ea46fe018b56990da8a12126b85e0f1",
+      "detali_comanda": {
+        "sandale": 6.0
+      },
+      "data_inregistrare": "2022-04-04T18:03:40.450587+03:00"
+    },
+    "29ea30df51c26fae07ae87b99735d405": {
+      "id_comanda": "29ea30df51c26fae07ae87b99735d405",
+      "detali_comanda": {
+        "saci": 44.0
+      },
+      "data_inregistrare": "2022-04-05T20:30:37.702167+03:00"
+    },
+    "2539d4eb1a035cffa1e3b763e76b5f12": {
+      "id_comanda": "2539d4eb1a035cffa1e3b763e76b5f12",
+      "detali_comanda": {
+        "apa": 7.0
+      },
+      "data_inregistrare": "2022-04-05T20:30:49.406856+03:00"
     }
   }
 }

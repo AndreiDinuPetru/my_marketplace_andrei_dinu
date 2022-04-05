@@ -15,14 +15,9 @@ import hashlib
 from datetime import datetime
 from pprint import pprint
 from produse.functii import adauga_un_produs
+from common.util import genereaza_id , sterge , listeaza
 
 from pytz import country_timezones, timezone
-
-
-def genereaza_id_comanda(detalii_comanda):
-    hash_object = hashlib.md5(bytes(json.dumps(detalii_comanda), encoding='UTF-8'))
-    hex_dig = hash_object.hexdigest()
-    return hex_dig
 
 
 def adauga_o_comanda():
@@ -41,8 +36,8 @@ def adauga_o_comanda():
         nume_produs = input("Introduceti produsele din comanda.\n") #introducerea produsului
         cantitatea = float(input("Introduceti cantitatea din comanda.\n")) #introducerea cantitatii
         actiune = input("Pentru a termina, introduceti:'stop' pentru a adauga o noua comanda apasa orice tasta si enter\n")
-        detalii_comanda = {nume_produs : cantitatea} # detaliile comanda pentru a putea genera id_comanda
-        id_comanda = genereaza_id_comanda(detalii_comanda)
+        detalii_comanda = {nume_produs : cantitatea}
+        id_comanda = genereaza_id(nume_produs , str(cantitatea))
         data_inregistrare = datetime.now(tz=timezone(country_timezones.get("RO")[0]))
         datele_noastre = citeste_datele_din_baza_de_date() # citirea din fisier
         datele_noastre["comenzi"][id_comanda] = { #structura dictionarului
@@ -116,12 +111,7 @@ def listeaza_toate_comenzile():
     Functia trebuie sa afiseze toate comenzile prezente in baza de date.
     Afisarea ar trebui sa contina toate informatiile comenzilor
     """
-    datele_noastre = citeste_datele_din_baza_de_date()
-    comenzi = datele_noastre["comenzi"]
-    if comenzi:
-        pprint(comenzi)
-    else:
-        print("Nu exista comenzi")
+    listeaza("comenzi")
 
 
 
@@ -131,8 +121,17 @@ def sterge_o_comanda():
     Cititi, stergeti, Scrieti
 
     """
+    comanda_pt_sters = input("intrrodu id pt sters\n")
+    sterge(comanda_pt_sters, "comenzi")
 
-    comanda_pt_sters = input("ntroduceți identificatorul comenzii de sters:\n")
-    datele_noastre = citeste_datele_din_baza_de_date()
-    datele_noastre["comenzi"].pop(comanda_pt_sters)
-    scrie_datele_in_baza_de_date(datele_noastre)
+#
+# def verificare_comanda():
+#     datele_noastre = citeste_datele_din_baza_de_date()
+#     nume_produs = datele_noastre["comenzi"]["detali_comanda"].keys()
+#     produs_de_verificat = datele_noastre["produse"]["nume_produs"]
+#     print(nume_produs)
+#    print(produs_de_verificat)
+    # if nume_produs == produs_de_verificat:
+    #     print(f"produsul {nume_produs} din comanda {identificatorul} este in stoc")
+    # else:
+    #     print(f"produsul {nume_produs} din comanda {identificatorul} NU este in stoc ")
