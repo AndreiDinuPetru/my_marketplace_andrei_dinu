@@ -1,6 +1,7 @@
 from comenzi.functii import listeaza_toate_comenzile, adauga_o_comanda, sterge_o_comanda, modifica_comanda
 from produse.functii import adauga_un_produs, listeaza_toate_produsele, sterge_produs
 from utilizatori.functii import listeaza_toti_utilizatorii, adauga_un_utilizator, sterge_un_utilizator
+from introducere_comanda.introducere_comenzi import introducere_comanda
 
 if __name__ == '__main__':
     def mesaj_de_iesire():
@@ -17,6 +18,7 @@ if __name__ == '__main__':
         "adauga_produs": adauga_un_produs,
         "sterge_produs": sterge_produs,
         "listeaza_produse": listeaza_toate_produsele,
+        "utilizatorul_alege_comanda": introducere_comanda,
         "exit": mesaj_de_iesire
     }
     actiune = None
