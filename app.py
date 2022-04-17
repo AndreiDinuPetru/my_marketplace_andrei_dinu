@@ -38,6 +38,10 @@ def delete_user(user_id):
     return Response(status=status, response=json.dumps({"message": message}))
 
 
+@app.route("/get_product/<string:user_id>", methods=["GET"])
+def get_user(id_product):
+    return Response(status=200, response=json.dumps({"message": f"the product id is: {id_product}"}))
+
 @app.route("/put_product", methods=["POST"])
 def put_product():
     message = json.loads(request.data)
@@ -60,6 +64,10 @@ def list_produs():
 def delete_product(id_product):
     status, message = sterge_un_produs_flask(id_product)
     return Response(status=status, response=json.dumps({"message": message}))
+
+@app.route("/get_comand/<string:comand_id>", methods=["GET"])
+def get_user(comand_id):
+    return Response(status=200, response=json.dumps({"message": f"Hello, I'm A user: {comand_id}"}))
 
 
 @app.route("/put_comand", methods=["POST"])
