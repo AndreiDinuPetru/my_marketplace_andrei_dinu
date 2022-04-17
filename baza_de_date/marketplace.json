@@ -1,103 +1,72 @@
 {
   "utilizatori": {
-    "0c9f348adae2d16224db2d10139efd68": {
-      "nume": "yolo",
-      "email": "yolo@gmail.com",
-      "data_inregistrare": "2021-08-31T01:19:59.543850+03:00",
-      "comanda_facuta": {
-        "id_comanda": "f57148293257b6622c9c6f7ea19fc3e5",
-        "detali_comanda": {
-          "sapun": 7
-        },
-        "data_inregistrare": "2022-03-31T18:57:37.403359+03:00"
-      }
-    },
-    "ae647813e9908ad1a6b52987ddd5803e": {
-      "nume": "andrei",
-      "email": "andrei@email.ro",
-      "data_inregistrare": "2022-03-28T20:27:53.253966+03:00",
-      "comanda_facuta": {
-        "id_comanda": "f57148293257b6622c9c6f7ea19fc3e5",
-        "detali_comanda": {
-          "sapun": 7
-        },
-        "data_inregistrare": "2022-03-31T18:57:37.403359+03:00"
-      }
-    },
     "e4f62c01e45bf7e217e18f1fe3d900aa": {
       "nume": "maria",
       "email": "maria@maria",
       "data_inregistrare": "2022-04-05T20:32:11.433951+03:00"
+    },
+    "a21484dc977361daa6da0e79a833498a": {
+      "nume": "petre",
+      "email": "petree123@yahoo.ro",
+      "data_inregistrare": "2022-04-14T19:54:19.347837+03:00"
+    },
+    "945fc4a4b9e06d171850563d0ede2aa5": {
+      "nume": "tavi",
+      "email": "tavi23@yahoo.ro",
+      "data_inregistrare": "2022-04-14T20:25:39.204659+03:00"
+    },
+    "ed40d0d022727d312a9949cf2fcca5ac": {
+      "nume": "tachei",
+      "email": "tache23@yahoo.ro",
+      "data_inregistrare": "2022-04-14T20:44:27.987562+03:00"
+    },
+    "e5e010c23d6b16649952c7519f8033e4": {
+      "nume": "tactthei",
+      "email": "tachetree23@yahoo.ro",
+      "data_inregistrare": "2022-04-15T17:30:39.830822+03:00"
+    },
+    "a155a652f6341685614ad6f339085d99": {
+      "nume": "thei",
+      "email": "te23@yahoo.ro",
+      "data_inregistrare": "2022-04-15T18:16:52.330424+03:00"
     }
   },
   "produse": {
     "c703f4772a4ce4cc781694f399f8d907": {
       "nume_produs": "mere",
       "pret": 6.9,
-      "data_inregistrare": "2022-03-30T19:35:06.610063+03:00",
-      "cantitate": 8
+      "data_inregistrare": "2022-03-30T19:35:06.610063+03:00"
     },
     "dd158481bda101856690988c7d877687": {
       "nume_produs": "pere",
       "pret": 9.0,
-      "data_inregistrare": "2022-03-30T19:35:22.017077+03:00",
-      "cantitate": 12
+      "data_inregistrare": "2022-03-30T19:35:22.017077+03:00"
     },
     "f139ba1766c5ebde82f41c248e255325": {
       "nume_produs": "ananas",
       "pret": 15.0,
-      "data_inregistrare": "2022-03-30T19:37:04.803894+03:00",
-      "cantitate": 8.5
+      "data_inregistrare": "2022-03-30T19:37:04.803894+03:00"
     },
     "ea70ddeb97047c6264fd116744eef218": {
       "nume_produs": "dovleci",
       "pret": 15.3,
-      "data_inregistrare": "2022-04-02T13:34:04.165224+03:00",
-      "cantitate": 85.0
+      "data_inregistrare": "2022-04-02T13:34:04.165224+03:00"
+    },
+    "81f8094cd25b3386b5bd18bbaef9066b": {
+      "nume_produs": "cartofi",
+      "pret": 9,
+      "data_inregistrare": "2022-04-15T19:53:56.413509+03:00"
     }
   },
   "comenzi": {
-    "a42251da5f70671dd99e42fdcd80f48e": {
-      "id_comanda": "a42251da5f70671dd99e42fdcd80f48e",
-      "detali_comanda": {
-        "varza": 14
-      },
-      "data_inregistrare": "2022-03-31T18:57:15.759494+03:00"
-    },
-    "f57148293257b6622c9c6f7ea19fc3e5": {
-      "id_comanda": "f57148293257b6622c9c6f7ea19fc3e5",
-      "detali_comanda": {
-        "sapun": 7
-      },
-      "data_inregistrare": "2022-03-31T18:57:37.403359+03:00"
-    },
-    "609a82274ae819cec0fa6451d35b1db8": {
-      "id_comanda": "609a82274ae819cec0fa6451d35b1db8",
-      "detali_comanda": {
-        "pepene": 45.0
-      },
-      "data_inregistrare": "2022-04-02T13:31:54.007505+03:00"
-    },
-    "9ea46fe018b56990da8a12126b85e0f1": {
-      "id_comanda": "9ea46fe018b56990da8a12126b85e0f1",
-      "detali_comanda": {
-        "sandale": 6.0
-      },
-      "data_inregistrare": "2022-04-04T18:03:40.450587+03:00"
-    },
-    "29ea30df51c26fae07ae87b99735d405": {
-      "id_comanda": "29ea30df51c26fae07ae87b99735d405",
-      "detali_comanda": {
-        "saci": 44.0
-      },
-      "data_inregistrare": "2022-04-05T20:30:37.702167+03:00"
-    },
-    "2539d4eb1a035cffa1e3b763e76b5f12": {
-      "id_comanda": "2539d4eb1a035cffa1e3b763e76b5f12",
-      "detali_comanda": {
-        "apa": 7.0
-      },
-      "data_inregistrare": "2022-04-05T20:30:49.406856+03:00"
+    "4bb23c5b8b8ec73ef5cd23515e381559": {
+      "id_comanda": "4bb23c5b8b8ec73ef5cd23515e381559",
+      "detalii_comanda": [
+        {
+          "81f8094cd25b3386b5bd18bbaef9066b": 9
+        }
+      ],
+      "data_inregistrare": "2022-04-17T11:29:46.316643+03:00"
     }
   }
 }
